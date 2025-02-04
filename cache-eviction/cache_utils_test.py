@@ -13,9 +13,9 @@ CACHE_TYPES_TEST_CASES = [
     CacheTestCase(cu.FIFOCache, ["1", "2", "3"], "3"),
     CacheTestCase(cu.LIFOCache, ["1", "2", "3"], -1),
     CacheTestCase(cu.LFUCache, ["1", "2", "3"], "3"),
-    # CacheTestCase(cu.RRCache, ["1", "2", "3"], -1),
+    # CacheTestCase(cu.RRCache, ["1", "2", "3"], -1), # Random eviction --> unpredictable test results
     CacheTestCase(cu.TimeBasedCache, ["1", "2", "3"], "3"),
-    # CacheTestCase(cu.ARCCache, ["1", "2", "3"], "3"),
+    # CacheTestCase(cu.ARCCache, ["1", "2", "3"], "3"),  # TODO Fix min()
     CacheTestCase(cu.SizeBasedCache, ["1", "2", "3"], "3"),
 ]
 
